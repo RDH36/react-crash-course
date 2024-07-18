@@ -1,14 +1,15 @@
+import classes from "./Post.module.css";
 interface PostProps {
-  name: string;
-  post: string;
+  author: string;
+  body: string;
 }
 
 export default function Post(props: PostProps) {
-  const { name, post } = props;
+  const { author, body } = props;
   return (
-    <div>
-      <p>{name}</p>
-      <p>{post}</p>
+    <div className={classes.post}>
+      <p className={classes.author}>{author}</p>
+      <p className={classes.text}>{body}</p>
     </div>
   );
 }

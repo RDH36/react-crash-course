@@ -1,11 +1,16 @@
-import Post from "./components/Post";
-
+import PostList from "./components/PostList";
+const postList = [
+  {
+    author: "Raymond",
+    body: "React is Awesome !",
+  },
+  {
+    author: "James",
+    body: "Vue is Awesome !",
+  },
+];
 function App() {
-  return (
-    <div>
-      <Post name="Raymond" post="React is Awesome!" />
-    </div>
-  );
+  return <PostList postList={postList} />;
 }
 
 export default App;
